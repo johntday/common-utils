@@ -13,8 +13,12 @@
 # Directory for staging data
 data/
 
-# Tmp directory
+# All tmp dirs
 **/tmp/
 
 # IDE
 .idea/
+
+# Exclude
+/bash/git/
+/bash/sapcc/
