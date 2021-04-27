@@ -1,0 +1,177 @@
+# README
+# Spec for this file: https://www.ilograph.com/docs/editing/spec/
+# Online link to this diagram: https://app.ilograph.com/@jday/hybris/__resources
+#
+
+# RESOURCES
+resources:
+  - name: Storefront
+    description: "Browser running JavaScript storefront client used by customers.  Link to [TMG - Storefront](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595510/Storefront)"
+    color: Gray
+    icon: AWS/_General/Users.svg
+
+  - name: SAP Cloud
+    color: AntiqueWhite
+    backgroundColor: DarkViolet
+    description: "[TMG - SAP Cloud](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1880981511/SAP+Cloud)"
+    children: 
+      - name: SAP Cloud Platform Extension Factory
+        description: "[TMG - SAP Cloud Platform Extension Factory](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562486/SAP+Cloud+Platform+Extension+Factory)"
+        color: Gray
+      - name: SAP Cloud Platform Integration
+        description: "[TMG - SAP Cloud Platform Integration](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595277/SAP+Cloud+Platform+Integration)"
+        color: Gray
+      - name: SAP Commerce Cloud
+        subtitle: CCV2
+        color: navy
+        description: "[SAP Commerce Cloud Architecture](https://www.sap.com/cxworks/article/435954690/sap_commerce_cloud_architecture), link to [TMG - SAP Commerce Cloud](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562475/SAP+Commerce+Cloud)"
+        children:
+          - name: Cloud Portal
+            description: "Manage [SAP Commerce Cloud Automation](https://help.sap.com/viewer/20125f0eca6340dba918bda360e3cdfa/v2011/en-US/e61d0cc9e61648639f2e4be264120fc8.html), link to [TMG - Cloud Portal](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595295/Cloud+Portal)"
+            subtitle: SAP Commerce Cloud Portal
+            backgroundColor: LightGray
+          - name: LDAP
+            description: "[TMG - LDAP](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562564/LDAP)"
+            #icon: AWS/Mgmt & Gov/Organizations_Account.svg
+            backgroundColor: LightGray
+          - name: NDS
+            #icon: GCP/Storage/Cloud Filestore.svg
+            backgroundColor: LightGray
+            subtitle: Network Data Storage
+          - name: Solr
+            #icon: Azure/Web/Azure Search.svg
+            backgroundColor: LightGray
+          - name: Data-Hub
+            description: "[TMG - Data-Hub](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562513/Data-Hub)"
+            backgroundColor: LightGray
+          - name: Cloud Hot-Folders
+            backgroundColor: LightGray
+            description: "[CxWorks Article: Help with Hot-Folders](https://www.sap.com/cxworks/article/456897746/get_the_most_out_of_your_cloud_hot_folders_and_azure_blob_storage) \n [SAP Help: Cloud Hot-Folders](https://help.sap.com/viewer/403d43bf9c564f5a985913d1fbfbf8d7/v2011/en-US/4e541ea07bbe468f9b684be4a02e4197.html) \n [TMG - Cloud Hot-Folders](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595284/Cloud+Hot-Folders)"
+          - name: SAP Commerce
+            subtitle: Hybris
+            description: "[SAP Help for Hybris](https://help.sap.com/viewer/product/SAP_COMMERCE_CLOUD/SHIP/en-US), link to [TMG - SAP Commerce](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562531/SAP+Commerce)"
+            backgroundColor: IndianRed
+            children:
+              - name: API Gateway
+                subtitle: OCC
+                id: HYBRIS_API
+                description: "[TMG - API Gateway](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562599/API+Gateway)"
+                color: Firebrick
+                children:
+                  - name: Tax
+                    id: HYBRIS_API_TAX
+                    subtitle: Tax API
+                  - name: Price
+                    id: HYBRIS_API_PRICE
+                    subtitle: Price API
+                  - name: Product Catalog
+                    id: HYBRIS_API_PRODUCT_CATALOG
+                    subtitle: Product Catalog API
+                  - name: Search
+                    id: HYBRIS_API_SEARCH
+                    subtitle: Search API
+                  - name: Payment
+                    id: HYBRIS_API_PAYMENT
+                    subtitle: Payment API
+                  - name: AVS
+                    id: HYBRIS_API_AVS
+                    subtitle: Address Validation API
+                  - name: Order
+                    id: HYBRIS_API_ORDER
+                    subtitle: Order API
+                  - name: Order History
+                    id: HYBRIS_API_ORDER_HISTORY
+                    subtitle: Order History API
+                  - name: Cart
+                    id: HYBRIS_API_CART
+                    subtitle: Cart API
+                  - name: User Account
+                    id: HYBRIS_API_ACCOUNT
+                    subtitle: User Account API
+                  - name: Hot-Folder
+                    subtitle: Batch Import / Export
+              - name: Platform Services
+                description: "The [Platform](https://help.sap.com/viewer/d0224eca81e249cb821f2cdf45a82ace/2011/en-US/8c29ad3f8669101485378214f6a7e2b6.html) foundation module is common to all configurations and includes a suite of extensions that provide basic building blocks to all of the higher-level, optional functional modules. It includes support for such things as persistence, logging, caching, cron jobs, multi-tenancy, security, search, clustering, and task queuing, among others. In addition, there are many optional extensions that can be included to extend its range of functionality to better support either the provided business modules, or new, custom features developed. \n\n Link to [TMG - Platform Services](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562613/Platform+Services)"
+              - name: Extensions
+                description: "Modules, [Extensions](https://help.sap.com/viewer/20125f0eca6340dba918bda360e3cdfa/v2011/en-US/8bbf0b9d866910149688b8d696c8d47e.html), and [AddOns](https://help.sap.com/viewer/20125f0eca6340dba918bda360e3cdfa/v2011/en-US/8adc7ca3866910148ddfe860464f0fc4.html) enable additional business logic, APIs, and presentation layers. A module consists of one or more extensions that provide these different layers of a single business function. \n\n Link to [TMG - Extensions](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562592/Extensions)"
+              - name: Cronjob
+                color: Purple
+                description: "[TMG - Cronjob](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562581/Cronjob)"
+              - name: Application-Mngt
+                subtitle: Hybris Configuration and Administration
+                color: Green
+                description: "[TMG - Application-Mngt](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595338/Application+Mngt)"
+                children:
+                  - name: Backoffice
+                    subtitle: Hybris Backoffice Tool
+                    description: "[TMG - Backoffice](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595419/Backoffice)"
+                    children: 
+                      - name: Administration
+                        description: "[TMG - Administration](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595439/Administration)"
+                      - name: Product Management
+                        description: "[TMG - Product Management](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595456/Product+Management)"
+                      - name: Adaptive Search
+                        description: "[TMG - Adaptive Search](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595432/Adaptive+Search)"
+                  - name: HAC
+                    subtitle: Hybris Adminstration Console
+                    description: "[TMG - HAC](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595469/HAC)"
+                  - name: SmartEdit
+                    subtitle: Web Content Management
+                    description: "Link to [TMG - SmartEdit](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868595482/SmartEdit)"
+              - name: Persistence Services
+                icon: AWS/_General/Generic-database.svg
+                subtitle: ORM to Hybris Database
+                description: "[TMG - Persistence Services](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562606/Persistence+Services)"
+          - name: Monitoring
+            description: "[TMG - Monitoring](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562524/Monitoring)"
+            #icon: AWS/Mgmt & Gov/OpsWorks_Monitoring.svg
+            backgroundColor: IndianRed
+            #backgroundColor: Coral
+            children:
+              - name: Dynatrace
+                description: "[TMG - Dynatrace](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562620/Dynatrace)"
+              - name: ELK
+                description: "[Elasticsearch, Logstash, Kibana](https://www.elastic.co/what-is/elk-stack), link to [TMG - ELK](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562631/ELK)"
+                children:
+                  - name: Elasticsearch
+                    description: "[TMG - Elasticsearch](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562642/Elasticsearch)"
+                  - name: Logstash
+                    description: "[TMG - Logstash](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562670/Logstash)"
+                  - name: Kibana
+                    description: "[TMG - Kibana](https://techmatesgroup.atlassian.net/wiki/spaces/~542933293/pages/1868562659/Kibana)"
+
+  - name: External
+    style: dashed
+    color: ForestGreen
+    children: 
+      - name: Enterprise
+      - name: 3rd Party
+
+#
+# PERSPECTIVES
+#
+perspectives:
+  - name: Context
+    relations: 
+    - from: Storefront
+      to: HYBRIS_API
+      label: request
+    - from: HYBRIS_API
+      to: Storefront
+      label: response
+    - from: SAP Commerce
+      to: SAP Cloud Platform Extension Factory
+      label: Event
+    - from: SAP Cloud Platform Extension Factory
+      to: HYBRIS_API
+      label: call
+    - from: SAP Commerce
+      to: SAP Cloud Platform Integration
+      label: request
+    - from: SAP Cloud Platform Integration
+      to: SAP Commerce
+      label: response
+    - from: Data-Hub
+      to: SAP Commerce
+    - from: External
+      to: Data-Hub
